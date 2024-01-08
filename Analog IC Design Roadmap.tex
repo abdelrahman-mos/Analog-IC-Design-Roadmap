@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{siunitx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{float}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\title{Analog IC Design Roadmap}
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\Large
+\maketitle
+
+\section*{Arabic Resources}
+\begin{table}[H]
+    \centering
+    \resizebox{\columnwidth}{!}{
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            No.& Course& Link& Material\\ \hline
+            1& Physics of Semiconductors PHM122& \href{https://youtube.com/playlist?list=PLtgWF1TGtFUGUJCuxKXOkkLjb1Z_yH11K}{Videos}& \href{https://drive.google.com/file/d/14X2p4lWr079R_YgxEahZUjt08_9B8x53/view?usp=share_link}{Textbook}\\ 
+            & & \href{https://drive.google.com/drive/folders/1frO6u-2VDySHaZuZlen4LZ071i7zqneB}{Slides}& \href{https://drive.google.com/drive/folders/1u7PW0Y868yZmAIR1zL-jl3tqmDsPDM6p}{Assignments}\\ \hline
+            2 (VI)& Electronics ECE211& \href{https://www.youtube.com/playlist?list=PLMSBalys69yzbmRgoceGUidP8B7fir1dx}{Videos}& \href{https://drive.google.com/file/d/10is26spc5RwzQR5jrTpewhjWqASddQNW/view?usp=share_link}{Textbook 1}\\ 
+            & (Dr. Hesham Omran)& \href{https://drive.google.com/drive/folders/1GqoJWWwg__vOc_mBsr5dRliW5LgefnhW}{Assignments}& \href{https://drive.google.com/file/d/1VSEFxfbxd0ukI5qGin1bDc1_BgwTl1wS/view?usp=share_link}{Textbook 2}\\
+            & & \href{https://youtube.com/playlist?list=PLMSBalys69yxideGtLlblOfoz2nnkY2V1}{Labs}& \\ \hline
+            3& Solid State Electronic Devices ECE213& \href{https://youtube.com/playlist?list=PLDifeaWAlc2jQCDjRXHxSRya2np0GjowZ}{Videos}& \href{https://drive.google.com/file/d/1iohr9EQ8qikB7vHep3AdtENCkofKVXMb/view?usp=share_link}{Textbook}\\
+            & & \href{https://drive.google.com/drive/folders/11AyK7_encVOJkt2ALkmLmlnBbWU2nOvG}{Slides}& \href{https://drive.google.com/drive/folders/13THu4a3vRZHo6UdY4P5v42YMCXc9BGMX}{Problem Sets}\\ 
+            & & \href{https://drive.google.com/drive/folders/1FT6vBJONZMfMJLfEV0js06AxJt4IlYIM}{Labs}& \\ \hline
+            4& Digital Circuits ECE212& \href{https://youtube.com/playlist?list=PLffO0PKa_AqF3fy9YwNolJS6L2ihBfS2M}{Videos}& \href{https://drive.google.com/file/d/1-clLoEkncZoUtc61PNqQZfctg7kJ0UlC/view}{Textbook}\\ 
+            & (Dr. Sameh Ibrahim)& \href{https://drive.google.com/drive/folders/1weSIhUowqP4sE5Lw5QbcLAbCg0UWZ5wu}{Assignments}& \href{https://drive.google.com/drive/folders/1zFoMl3GUZ5zjXTTB8ewB1TrqjpDIzaeT}{Project (VI)}\\\hline
+            5 (Optional)& Analog Circuits 1 ECE312& \href{https://youtube.com/playlist?list=PLn8yg3bTmnBMdiTGosHI70OwqAnPBHihw}{Videos}& \href{https://drive.google.com/file/d/10is26spc5RwzQR5jrTpewhjWqASddQNW/view?usp=share_link}{Textbook 1}\\ 
+            & & \href{https://drive.google.com/drive/folders/18ZbDrZpIOLye5G4EQudCCWs9w7BnTCnl}{Assignments}& \href{https://drive.google.com/file/d/10jptwIjZyKZucCfCkCYNZDeIluk5ocQV/view}{Textbook 2}\\ \hline
+            6 (VI)& Analog IC Design& \href{https://youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj}{Videos 1}& \href{https://drive.google.com/file/d/10jptwIjZyKZucCfCkCYNZDeIluk5ocQV/view}{Textbook}\\ 
+            & (Dr. Hesham Omran)& \href{https://youtube.com/playlist?list=PLMSBalys69yxQrKE_46AYuFkthIBh-WVJ}{Videos 2}& \href{https://drive.google.com/drive/folders/1bVQrHuBM_Zyx9GM0jdYwGqFmFIBjb9Fk}{Labs (VI)}\\ 
+            & & \href{https://www.youtube.com/playlist?list=PLMSBalys69yza1LVr3JNc6_pnYW4CvlEb}{Cadence Tutorials}& \href{https://drive.google.com/drive/folders/1OWcbg8f48_ilr8jptdFEA3nbNeQyD0Hi}{Slides}\\ \hline
+            7& Digital IC Design& \href{https://youtube.com/playlist?list=PLMSBalys69yzvAKErDt7tT7O-iIKPlOCP}{Videos 1}& \href{https://drive.google.com/file/d/1C_oqeYZtKoPknInQSXJIiyK8JTdP08Bv/view?usp=share_link}{Textbook}\\ 
+            & (Dr. Hesham Omran)& \href{https://youtube.com/playlist?list=PLMSBalys69yxoIjeZ2Q3fxs69cGCU14B1}{Videos 2}& \href{https://drive.google.com/drive/folders/13qOhwyrNFEtWz1WIS5ePWHmnr6po2SjQ}{Labs (VI)}\\ 
+            & & \href{https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy}{Videos 3}& \href{https://drive.google.com/drive/folders/1M5aUzLXa6l-Hi-CttAiizFCSNZoZwVvX}{Slides}\\ \hline
+            8& Fabrication and Layout Technology& \href{https://youtube.com/playlist?list=PLrwcpgRKGrGdKRANVeezRtCxLIjTVA0-9}{Videos (Dr. Hani Ragaai)}& \\ 
+            & & \href{https://youtube.com/playlist?list=PLiPOIc07mr4yzlzBnjsFfmar6aLDCjFxf}{Videos (Dr. Sameh Ibrahim)}& \href{http://www.iqytechnicalcollege.com/BAE\%20665-Fabrication\%20Engineering\%20at\%20the\%20Micro\%20and\%20Nanoscale.pdf}{Textbook}\\\hline
+            \multicolumn{4}{|c|}{Advanced Topics}\\ \hline
+            9 (Optional)& Modern VLSI Devices ECE317& \href{https://youtube.com/playlist?list=PLDifeaWAlc2i_tSYNxYS0EebTxB_DRkze}{Videos}& \href{https://drive.google.com/file/d/1iohr9EQ8qikB7vHep3AdtENCkofKVXMb/view?usp=share_link}{Textbook}\\ 
+            & & \href{https://drive.google.com/drive/folders/1jO6g5Xyzy01T0tYh9YmxKfsWu469HKEz}{Slides}& \href{https://drive.google.com/drive/folders/19w8PZIsnvOFmTJD12s_gzMHg0pPdioc0}{Other References}\\
+            & & \href{https://drive.google.com/drive/folders/1OjNouQ5AG_85e_rhGR2T9132h76MdE1j}{Assignments}& \\ \hline
+            10& Analog IC Design ECE412& \href{https://youtube.com/playlist?list=PLM1qWL0qm6Kj_SiFuB3pLSbE2G8Q7rna_}{Videos}& \href{https://drive.google.com/file/d/10jptwIjZyKZucCfCkCYNZDeIluk5ocQV/view}{Textbook}\\ 
+            & & \href{https://drive.google.com/drive/folders/1dzoqpRZuC4HecpirSiTjN538SSDdOwRa}{Assignments}& \\\hline
+            11& Analog RF IC Design& \href{https://youtube.com/playlist?list=PLrwcpgRKGrGfq3Mzbdkbza3dPBB30a67o}{Videos 1}& \href{https://drive.google.com/file/d/1zguUyrjY7MBE0t0HYZgf9VSAm8uMJN7o/view?usp=share_link}{Textbook}\\ 
+            & (Dr. Mohamed El-Nozahi)& \href{https://youtube.com/playlist?list=PLWS6ZGNcgIS3D_dh19qa-9UW98BLijnc9}{Videos 2}& \href{https://drive.google.com/drive/folders/1DuT27jDbddwKh8m_E3qbohwGW35PYW28}{Slides}\\ 
+            & & & \href{https://drive.google.com/drive/folders/1M_RwTUrpAP5W3yRWPZGOeQ72jcS4d3nR}{Assignments}\\\hline
+            12& Analog Integrated Systems Design ECE486& \href{https://youtube.com/playlist?list=PLMSBalys69yxMAla5am1cJ-__GGkMyuFi}{Videos}& \href{https://link.springer.com/book/10.1007/978-3-030-90808-9}{Textbook}\\ 
+            & & \href{https://drive.google.com/drive/folders/1P1eR9ih6PlXjk31y1_eucaYytVVz-5DM}{Slides}& \href{https://drive.google.com/drive/folders/1Q7ZbEdv-5skkqEj5j8ooOujP1t5eUBgP}{Labs}\\ \hline
+            \multicolumn{4}{|c|}{Very Advanced Topics}\\ \hline
+            13& Power Management Units ECE639& \href{https://www.youtube.com/playlist?list=PLc3vj1kda1mMIpoirTqGAkpFkiaDr-1B7}{Videos (Dr. Sameh Ibrahim)}& \href{https://drive.google.com/drive/folders/1xKt86mo2VVvd7VAhiKFjCTdCL396Bxuw?usp=sharing}{Slides}\\
+            & & \href{https://drive.google.com/file/d/1tky5eRk_zzhzEzDRzOxxgUTvPElRgQOP/view?usp=sharing}{Videos (Dr. Faisal (CUFE))}& \href{https://drive.google.com/drive/folders/1keUwHvL4U729MuYV8MaZ-OL-hn3qs4cd?usp=sharing}{Slides}\\ 
+            & & \href{https://drive.google.com/file/d/1t1gTkfL-uktHnqvjw3asmg0XM5fTUETr/view?usp=sharing}{Textbook 1}& \href{https://drive.google.com/file/d/1t1gTkfL-uktHnqvjw3asmg0XM5fTUETr/view?usp=sharing}{Textbook 2} \\ \hline
+            14& High-Speed Serial Links& \href{https://www.youtube.com/playlist?list=PLAlobGNba63_3NjxocT7eUZyn3Fc76wTU}{Videos}& \href{https://drive.google.com/drive/folders/1unc16zYO_6FmJRUHK_F1QmMmPNBGnD-D}{Slides}\\
+            & (Dr. Sahmeh Ibrahim)& & \\ \hline
+            15& Introduction to MEMS Design& \href{https://www.youtube.com/playlist?list=PLL1cLr3cXVKnr4pp957DlkB_Ubl4UHiAS}{Videos}& \\ \hline
+        \end{tabular}
+    }
+\end{table}
+
+\newpage
+\section*{English Resources}
+\begin{table}[H]
+    \centering
+    \resizebox{\columnwidth}{!}{
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            No.& Course& Link& Material\\ \hline
+            1& Integrated Circuit Devices EE130& \href{http://www.infocobuild.com/education/audio-video-courses/electronics/ee130-spring2014-berkeley.html}{Videos}& \href{https://www.chu.berkeley.edu/modern-semiconductor-devices-for-integrated-circuits-chenming-calvin-hu-2010/}{Textbook}\\ 
+            & & & \href{https://www-inst.eecs.berkeley.edu//~ee130/sp13/homework.html}{Assignments}\\ \hline
+            2 (Optional)& Solid State Devices EE230& \href{https://inst.eecs.berkeley.edu/~ee230/sp08/\#lectures}{Lecture Notes}& \href{https://inst.eecs.berkeley.edu/~ee230/sp08/\#references}{References}\\
+            & & & \href{https://inst.eecs.berkeley.edu/~ee230/sp08/\#homework}{Assignments}\\ \hline
+            3 (VI)& Razavi Electonics 1& \href{https://youtube.com/playlist?list=PLiDoPUX9nLkJ8dnPgKoVEOiAb8BfulKRR}{Videos}& \href{https://drive.google.com/file/d/10is26spc5RwzQR5jrTpewhjWqASddQNW/view?usp=share_link}{Textbook 1}\\ 
+            & & \href{https://drive.google.com/drive/folders/1GqoJWWwg__vOc_mBsr5dRliW5LgefnhW}{Assignments (ASU)}& \href{https://drive.google.com/file/d/1VSEFxfbxd0ukI5qGin1bDc1_BgwTl1wS/view?usp=share_link}{Textbook 2}\\ \hline
+            3.1 (Optional)& Microelectronic Devices and Circuits EE105& \href{https://inst.eecs.berkeley.edu/~ee105/fa20/lectures.html\#top}{Videos}& \href{https://drive.google.com/file/d/1VSEFxfbxd0ukI5qGin1bDc1_BgwTl1wS/view?usp=share_link}{Textbook 2}\\ \hline
+            4 (VI)& Razavi Electonics 2& \href{https://www.youtube.com/playlist?list=PLO4mxQzfcml_56XSGcA8ULOv7qEtZd0Hy}{Videos}& \href{https://drive.google.com/file/d/10is26spc5RwzQR5jrTpewhjWqASddQNW/view?usp=share_link}{Textbook}\\
+            & & & \href{https://drive.google.com/drive/folders/18ZbDrZpIOLye5G4EQudCCWs9w7BnTCnl}{Assignments (ASU)}\\ \hline
+            5& Analog Integrated Circuits EE140& \href{http://www.infocobuild.com/education/audio-video-courses/electronics/ee140-spring2011-berkeley.html}{Videos}& \href{https://drive.google.com/file/d/10jptwIjZyKZucCfCkCYNZDeIluk5ocQV/view?usp=share_link}{Textbook}\\
+            & & & \href{https://people.eecs.berkeley.edu/~pister/140sp20/hw/}{Assignments}\\ \hline
+            6& Digital Integrated Circuits EE141& \href{https://www.youtube.com/playlist?list=PLpelQYOtPS_GffAjTNVRyy-QW5ydtkYvg}{Videos}& \href{https://drive.google.com/file/d/1-clLoEkncZoUtc61PNqQZfctg7kJ0UlC/view?usp=share_link}{Textbook}\\ 
+            & & \href{https://drive.google.com/drive/folders/1weSIhUowqP4sE5Lw5QbcLAbCg0UWZ5wu}{Assignments (ASU)}& \href{http://bwrcs.eecs.berkeley.edu/Classes/icdesign/ee141_f12/assignments.htm}{Assignments}\\
+            & & \href{http://www.vlsi.wpi.edu/cds/}{Cadence Tutorials}& \href{http://bwrcs.eecs.berkeley.edu/Classes/icdesign/ee141_f12/labs.html}{Labs}\\ \hline
+            7& Microfabrication Technology EE143& \href{http://www.infocobuild.com/education/audio-video-courses/electronics/ee143-fall2014-berkeley.html}{Videos}& \href{http://library.lol/main/96DB8102DE6BC5B399389C81A24B1B28}{Textbook}\\ 
+            & & \href{https://www-inst.eecs.berkeley.edu//~ee143/fa10/lab.html}{Labs}& \href{https://www-inst.eecs.berkeley.edu//~ee143/fa10/homework.html}{Assignments}\\ \hline
+            8& Integrated Circuits for Communication (RF) EE142& \href{http://rfic.eecs.berkeley.edu/142/lectures.html}{Lecture Notes}& \href{https://picture.iczhiku.com/resource/eetop/WYIGWRuzPsQfJvxM.pdf}{Textbook}\\ 
+            & & & \href{http://rfic.eecs.berkeley.edu/142/labs.html}{Labs}\\ \hline
+            \multicolumn{4}{|c|}{Advanced Topics}\\ \hline
+            9& Advanced Analog Integrated Circuits EE240& \href{https://youtube.com/playlist?list=PLoylzyWSZVlecBdrlBx5zz8-67staJI6X}{Videos (Elad)}& \href{http://fa.ee.sut.ac.ir/Downloads/AcademicStaff/24/Courses/73/[Gray___Meyer]_Analysis_and_Design_of_Analog_Integrated_Circuits_5th_ed.pdf}{Textbook 1}\\ 
+            & & \href{http://www.infocobuild.com/education/audio-video-courses/electronics/ee240-spring2011-berkeley.html}{Videos (Simone)}& \href{https://drive.google.com/file/d/10jptwIjZyKZucCfCkCYNZDeIluk5ocQV/view?usp=share_link}{Textbook 2}\\ 
+            & & \href{https://youtube.com/playlist?list=PLc7Gz02Znph-c2-ssFpRrzYwbzplXfXUT}{Videos (Hajmiri)}& \href{https://inst.eecs.berkeley.edu/~ee240b/sp18/lectures.html}{Slides}\\ 
+            & & & \href{http://bwrcs.eecs.berkeley.edu/Classes/icdesign/ee240_s09/homework.html}{Assignments}\\ \hline
+            10& Advanced Digital Integrated Circuits EE241& \href{https://archive.org/details/ucberkeley_webcast_itunesu_354820903/01.+2009-01-21+-+Lecture+1.mp4}{Videos}& \href{https://drive.google.com/file/d/1-clLoEkncZoUtc61PNqQZfctg7kJ0UlC/view}{Textbook 1}\\ 
+            & & \href{https://inst.eecs.berkeley.edu//~ee241/sp20/}{Assignments}& \href{https://link.springer.com/book/10.1007/978-0-387-71713-5}{Textbook 2}\\ \hline
+            \multicolumn{4}{|c|}{Very Advanced Topics}\\ \hline
+            11& High-Speed Electrical Interface Circuit Design EE290C& \href{http://www.infocobuild.com/education/audio-video-courses/electronics/ee290c-spring2011-berkeley.html}{Videos}& \href{http://library.lol/main/E6402773287FE47D66C6C11F1736198B}{Textbook1}\\ 
+            & (Serial Links)& \href{http://library.lol/main/0BF5887F3066FC626CE22B38E8AC0D9E}{Textbook 2}& \href{http://library.lol/main/85AA00730E0781CA50E63BF78E2E86D5}{Textbook 3}\\ \hline
+            12& Analog-Digital Interface Integrated Circuits EE247& \href{https://archive.org/details/ucberkeley_webcast_itunesu_354821202}{Videos}& \href{https://inst.eecs.berkeley.edu/~ee247/fa10/references.html}{Textbooks}\\ 
+            & & \href{https://inst.eecs.berkeley.edu/~ee247/fa10/lectures.html}{Lecture Notes}& \href{https://inst.eecs.berkeley.edu/~ee247/fa10/homework.html}{Assignments}\\ \hline
+            13& Introduction to MEMS Design EEC247B& \href{https://inst.eecs.berkeley.edu/~ee247b/sp19/lectures.html}{Videos}& \href{https://link.springer.com/book/10.1007/b117574}{Textbook}\\
+            & & & \href{https://inst.eecs.berkeley.edu/~ee247b/sp19/homework.html}{Assignments}\\ \hline
+        \end{tabular}
+        }
+\end{table}
+
+\end{document}
